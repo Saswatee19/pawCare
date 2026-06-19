@@ -86,32 +86,26 @@ html {
   width: 100%;
 }
 
-/* ==========================================================================
-   FIXED TEXT SWAPPING EFFECT
-   ========================================================================== */
-
-/* 1. The Container Link Styling */
 .swap-link {
   display: inline-block;
-  font-size: 4rem; /* Big headline typography */
+  font-size: 4rem; 
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
   font-weight: 900;
 }
 
-/* 2. The Window Wrapper holding the lines (FIXED) */
 .text-wrapper {
-  display: inline-flex;  /* Changed to inline-flex to capture text widths */
+  display: inline-flex;  
   flex-direction: column;
   position: relative;
-  height: 150px;          /* Forced explicit structural height matching font-size */
-  line-height: 80px;     /* Matches height perfectly to vertical center text */
-  width: 400px;          /* Allocates enough horizontal space for your longest phrase */
-  overflow: hidden;      /* Masks out everything sliding past the boundaries */
+  height: 150px;          
+  line-height: 80px;     
+  width: 400px;          
+  overflow: hidden;      
 }
 
-/* 3. Individual lines of text */
+
 .line {
   display: block;
   position: absolute;
@@ -121,47 +115,45 @@ html {
   white-space: nowrap;
   
   
-  /* Smooth animation setup */
+  
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
   
 }
 
-/* 4. --- TIMELINE ANIMATIONS --- */
 
-/* "Healthy care" Line */
 .text-front {
   animation-name: swapTextFront;
 }
 
-/* "Happy Pets" Line */
+
 .text-back {
-  transform: translateY(150%); /* Hidden safely right beneath the window line */
+  transform: translateY(150%); 
   animation-name: swapTextBack;
 }
 
 @keyframes swapTextFront {
   0%, 45% {
-    transform: translateY(0%); /* Holds stationary and readable */
+    transform: translateY(0%); 
   }
   50%, 95% {
-    transform: translateY(-100%); /* Slides UP and disappears */
+    transform: translateY(-100%); 
   }
   100% {
-    transform: translateY(0%); /* Snaps back around to seamlessly loop */
-  }
+    transform: translateY(0%);
+  } 
 }
 
 @keyframes swapTextBack {
   0%, 45% {
-    transform: translateY(150%); /* Hidden at bottom */
+    transform: translateY(150%); 
   }
   50%, 95% {
-    transform: translateY(0%); /* Slides UP into view and locks */
+    transform: translateY(0%); 
   }
   100% {
-    transform: translateY(150%); /* Instantly resets to bottom frame to repeat */
+    transform: translateY(150%); 
   }
 }
 .mainleftmid{
@@ -172,7 +164,6 @@ html {
 }
 .wagging-text {
   display: inline-block;
-  /* Change to 'ease-in-out' so it slows down gently at the top and bottom */
   animation: wag 0.7s infinite;
 }
 @keyframes wag {
@@ -180,7 +171,7 @@ html {
     transform: translateY(0);
   }
   15% {
-    transform: translateY(-19px); /* Smoothly glides up by 12px at the halfway mark */
+    transform: translateY(-19px); 
   }
   30%{
     transform: translateY(0);
@@ -196,7 +187,7 @@ html {
     transform: translateX(10px);
   }
   100% {
-    transform: translateX(0); /* Smoothly returns to the starting position */
+    transform: translateX(0); 
   }
 }
 
@@ -255,7 +246,7 @@ html {
   height: 26em;
   transform: scaleX(-1);
 }
-/* Card Container */
+
 .pet-card {
   z-index: 10;
   opacity: 0;
@@ -266,7 +257,7 @@ html {
   border-radius: 24px;
   padding: 24px;
   max-width: 400px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06); /* Soft floating drop shadow */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06); 
   font-family: system-ui, -apple-system, sans-serif;
   animation: floatAnimation 3s ease-in-out infinite;
   transition: opacity 0.6s ease-in-out, filter 0.5s ease-in-out;
@@ -276,13 +267,13 @@ html {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px); /* Moves up by 10px */
+    transform: translateY(-10px); 
   }
   100% {
     transform: translateY(0);
   }
 }
-/* Header Alignment */
+
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -322,7 +313,7 @@ html {
   color: #757575;
 }
 
-/* Floating Top Right Tag */
+
 .badge-vaccinated {
   background: #e5f0fc;
   color: #0066cc;
@@ -332,7 +323,7 @@ html {
   border-radius: 20px;
 }
 
-/* 2x2 Vitals Grid */
+
 .stats-grid {
   background-color: #ffffff;
   display: grid;
@@ -353,13 +344,12 @@ html {
   text-align: center;
 }
 
-/* Special styling for the purple/pink vaccine box */
 .stat-box.highlight-box {
   background: #f5edf7; 
 }
 
 .stat-box.highlight-box .stat-value {
-  color: #4A154B; /* Matches PawHaven brand theme color */
+  color: #4A154B; 
 }
 
 .stat-value {
@@ -374,7 +364,7 @@ html {
   color: #888888;
 }
 
-/* Footer Health Status Bar */
+
 .card-footer {
   display: flex;
 
@@ -388,7 +378,7 @@ html {
 .status-dot {
   width: 8px;
   height: 8px;
-  background-color: #24b263; /* Green for healthy status */
+  background-color: #24b263; 
   border-radius: 50%;
 }
 
@@ -399,12 +389,9 @@ html {
   color: #1e7e44;
 }
 
-/* 3. THE HOVER LIFT: What happens when a user hovers over the card */
+
 .pet-card:hover {
-  /* Lifts the card up by 6 pixels */
   transform: translateY(-6px); 
-  
-  /* Makes the shadow wider and softer to look like it's higher off the ground */
   box-shadow: 0 20px 40px rgba(74, 21, 75, 0.08); 
 }
 .mainright:hover .pet-card{
