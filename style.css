@@ -416,10 +416,6 @@ html {
 .hamburger {
   display: none;
 }
-.ham-img{
-  height: 40px;
-  width: 40px;
-}
 .info-box{
   display: flex;
   flex-direction: column;
@@ -443,17 +439,17 @@ html {
   border-radius: 50% 50%;
   height: 7rem;
   width: 7rem;
-  border 0.6s ease-in-out;
+  transition: border 0.3s ease-in-out;
 }
 .footer-info{
   width: 90em;
-        height: 210px; 
-        position: absolute; 
-        margin-top: 33%;
-        display: flex; 
-        align-items: center;
-        justify-content: space-around;
-        margin-right: 20px;
+  height: 210px; 
+  position: absolute; 
+  margin-top: 33%;
+  display: flex; 
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 20px;
 }
 .info-box:hover{
   transform: translateY(-3px);
@@ -464,6 +460,13 @@ html {
   border: 2px solid #1a111a;
   box-shadow: 0 10px 20px rgba(246, 3, 3, 0.3);
 }
+.wrapper-1{
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper-2{
+  display: flex;
+}
 @media (max-width: 768px) {
   
   .navright {
@@ -472,20 +475,20 @@ html {
 
   .hamburger {
     display: flex;
-    position: absolute;
+    position: fixed;
     right: 20px; 
     top: 1.5em;
     z-index: 1001;
     cursor: pointer;
   }
   .close-icon{
-    margin-left: 90%;
+    margin-right: 90%;
   }
   .hamburger-text {
     z-index: 1002;
     position: fixed;
     top: 3.2em;
-    left: -100%; 
+    right: -100%; 
     width: 250px;
     height: 100vh;
     background-color: #f1e4f3;
@@ -494,13 +497,68 @@ html {
     gap: 30px;
     padding: 1.5em;
     font-size: x-large;
-    /* transition: left 0.3s ease-in-out;  */
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    box-shadow: -2px 0 5px rgba(243, 4, 4, 0.1);
+    transition: right 0.3s ease-in-out;
   }
-  .hamburger-icon:active .hamburger-text {
-    left: 0;
+  .side{
+    gap: 5em;
+    border-bottom: 0.5px solid #1a111a;
   }
-  .close-icon:active .hamburger-text{
-    left: -100%;
+  .side:hover{
+    color: #ff5733;
   }
+  .hamburger-text.open{
+    right: 0%;
+  }
+  .hamburger-icon.fade_out{
+    display: none;
+  }
+  
+  .main{
+    display: flex;
+    flex-direction: column;
+  }
+  .mainright img{
+    display: none;
+  }
+  .pet-card{
+    position: static;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    margin-left: -20%;
+    opacity: 1;
+  }
+  .footer-info{
+    position: static;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+   .footer-info{
+    margin-left: -1%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%;
+    padding: 10px;
+   }
+   .info-box{
+    position: static;
+    top: auto;
+    left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
 }
