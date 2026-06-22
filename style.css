@@ -18,12 +18,15 @@ html {
     background-color: #a53860;
     top: 0;
     left: 0;
-    height: 100vh;
+    right: 0;
+    bottom: 0;
     width: 100%;
     z-index: 9999;
 }
 .bird{
-    border: 2px solid #f1e4f3;
+    border-top: 2px solid #f1e4f3;
+    border-right: 2px solid #f1e4f3;
+    border-left: 2px solid #f1e4f3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +44,9 @@ html {
     display: none;
 }
 .cat{
-    border: 2px solid #f1e4f3;
+    border-top: 2px solid #f1e4f3;
+    border-right: 2px solid #f1e4f3;
+    border-left: 2px solid #f1e4f3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -376,6 +381,8 @@ html {
   font-weight: 500;
   padding: 6px 12px;
   border-radius: 20px;
+  animation: floatAnimation 4s ease-in-out infinite;
+  transition: opacity 0.6s ease-in-out, filter 0.5s ease-in-out;
 }
 
 
@@ -509,7 +516,7 @@ html {
 .wrapper-2{
   display: flex;
 }
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   
   .navright {
     display: none;
@@ -529,14 +536,14 @@ html {
   .hamburger-text {
     z-index: 1002;
     position: fixed;
-    top: 3.2em;
+    top: 0.1em;
     right: -100%; 
     width: 250px;
     height: 100vh;
     background-color: #f1e4f3;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    justify-content: space-between;
     padding: 1.5em;
     font-size: x-large;
     box-shadow: -2px 0 5px rgba(243, 4, 4, 0.1);
@@ -548,6 +555,7 @@ html {
   }
   .side:hover{
     color: #ff5733;
+    font-weight: 700;
   }
   .hamburger-text.open{
     right: 0%;
@@ -559,6 +567,7 @@ html {
   .main{
     display: flex;
     flex-direction: column;
+    margin-left: -30%;
   }
   .mainright img{
     display: none;
@@ -569,7 +578,8 @@ html {
     bottom: auto;
     left: auto;
     right: auto;
-    margin-left: -20%;
+    margin-left: -30%;
+    max-width: 110%;
     opacity: 1;
   }
   .footer-info{
@@ -587,10 +597,108 @@ html {
    .footer-info{
     margin-left: -1%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 8fr);
+    grid-template-rows: repeat(2, 8fr);
     gap: 15px;
+    width: 160%;
+    padding: 10px;
+   }
+   .info-box{
+    position: static;
+    top: auto;
+    left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 1250px) and (min-width: 481px){
+  .navright {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    position: fixed;
+    right: 20px; 
+    top: 1.5em;
+    z-index: 1001;
+    cursor: pointer;
+  }
+  .close-icon{
+    margin-right: 90%;
+  }
+  .hamburger-text {
+    z-index: 1002;
+    position: fixed;
+    top: 0.1em;
+    right: -100%; 
+    width: 250px;
+    height: 100vh;
+    background-color: #f1e4f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5em;
+    font-size: x-large;
+    box-shadow: -2px 0 5px rgba(243, 4, 4, 0.1);
+    transition: right 0.3s ease-in-out;
+  }
+  .side{
+    gap: 5em;
+    border-bottom: 0.5px solid #1a111a;
+  }
+  .side:hover{
+    color: #ff5733;
+    font-weight: 700;
+  }
+  .hamburger-text.open{
+    right: 0%;
+  }
+  .hamburger-icon.fade_out{
+    display: none;
+  }
+  
+  .main{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0%;
+  }
+  .mainright img{
+    display: none;
+  }
+  .pet-card{
+    position: static;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    margin-left: -30%;
+    max-width: 110%;
+    opacity: 1;
+  }
+  .footer-info{
+    position: static;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+
+    margin-bottom: 20px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+   .footer-info{
+    margin-left: 0%;
+    display: grid;
+    grid-template-columns: repeat(2, 8fr);
+    grid-template-rows: repeat(2, 8fr);
+    gap: 15px;
+    width: 160%;
     padding: 10px;
    }
    .info-box{
