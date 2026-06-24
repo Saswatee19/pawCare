@@ -681,7 +681,10 @@ footer *,
     font-size: medium;
   }
 
-
+.contact-info-grid{
+  display: flex;
+  flex-direction: column;
+}
 .contact-layout-main {
     padding: 80px 1rem 40px;
     gap: 2rem;
