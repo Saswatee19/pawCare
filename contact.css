@@ -60,6 +60,37 @@ html {
     visibility: hidden;
     pointer-events: none;
 }
+.confirm{
+  position: fixed;
+  left: 0;
+  z-index: 10000;
+  height: 100%;
+  width: 100%;
+  background-color: #a53860;
+  color: #fcfefe;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  transition: display 0.3s ease-in-out;
+}
+.confirm img{
+  display: block;
+  max-width: 60%;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-top: 1.5rem;
+  flex-shrink: 0;
+}
+.content{
+  padding-top: 20%;
+}
+.short-msg {
+  display: none;
+}
 
 .navbar {
   width: 100%;
@@ -286,7 +317,7 @@ button,
 .btn, 
 .btn-aqua, 
 .btn-outline-white {
-    font-family: "Sora", sans-serif;
+    font-family: "Sora";
 }
 
 .contact-info-grid {
@@ -326,6 +357,10 @@ button,
     line-height: 1.6;
     opacity: 0.9;
 }
+#visit-clinic-card {
+    background: #ffffff !important;
+    color: #2a1520 !important;
+}
 
 
 .contact-map-container {
@@ -334,6 +369,18 @@ button,
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(42, 21, 32, 0.1);
     height: 400px;
+}
+.error1{
+  display: none;
+  color: red;
+}
+.error2{
+  display: none;
+  color: red;
+}
+.error3{
+  display: none;
+  color: red;
 }
 
 footer {
@@ -570,6 +617,18 @@ footer *,
 }
 
 @media (max-width: 480px) {
+
+  .confirm{
+    padding: 1.5rem;
+  }
+  
+  .content{
+    padding-top: 0;
+    text-align: center;
+  }
+  .confirm img{
+    width: 50dvh;
+  }
   
   .navright {
     display: none;
@@ -681,48 +740,46 @@ footer *,
     font-size: medium;
   }
 
-.contact-info-grid{
-  display: flex;
-  flex-direction: column;
-}
-.contact-layout-main {
-    padding: 80px 1rem 40px;
-    gap: 2rem;
-}
-.contact-hero h1 {
-    font-size: 2rem;
-}
-.contact-hero p {
-    font-size: 0.95rem;
-}
-.gradient-card {
-    padding: 1.5rem 1.2rem;
-    border-radius: 16px;
-}
-.contact-newsletter-card h2 {
-    font-size: 1.5rem;
-}
-.contact-card {
-    padding: 1.5rem 1rem;
-}
-.contact-card .info-icon {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-.contact-card h3 {
-    font-size: 1.2rem;
-}
-.transparent-form input,
-.transparent-form textarea,
-.newsletter-form-large input {
-    padding: 14px 20px;
-    font-size: 0.95rem;
-}
-.contact-map-container {
-    height: 250px;
-    border-radius: 12px;
-}
 
+  .contact-top-row {
+      flex-direction: column;
+      gap: 2.5rem;
+  }
+  .transparent-form .form-row {
+      flex-direction: column;
+      gap: 1.5rem;
+  }
+  .contact-info-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+  }
+  .transparent-form input,
+  .transparent-form textarea,
+  .newsletter-form-large input {
+      box-sizing: border-box;
+  }
+  .contact-layout-main {
+      padding: 80px 1rem 40px;
+      gap: 3rem;
+  }
+  .contact-hero h1 {
+      font-size: 2.2rem;
+  }
+  .contact-hero p {
+      font-size: 0.95rem;
+  }
+  .gradient-card {
+      padding: 2rem 1.2rem;
+  }
+  .contact-newsletter-card h2 {
+      font-size: 1.5rem;
+  }
+  .contact-card {
+      padding: 1.5rem 1rem;
+  }
+  .contact-map-container {
+      height: 250px;
+  }
   footer {
     padding: 48px 24px 32px;
   }

@@ -222,7 +222,7 @@ html {
 }
 .wagging-text {
   display: inline-block;
-  animation: wag 0.7s infinite;
+  animation: wag 0.93s infinite;
 }
 @keyframes wag {
   0% {
@@ -1037,6 +1037,7 @@ background: transparent !important;
 .pawcare-faq-section {
   background-color: #f1e4f3;
   padding: 60px 20px;
+  background-color: #f1e4f3;
   font-family: "Sora", sans-serif;
 }
 
@@ -1071,10 +1072,15 @@ background: transparent !important;
 }
 
 .faq-item {
-  background-color: #ffffff;
+  background-color: #a53860;
   border-radius: 8px;
   overflow: hidden;
   transition: all 0.3s ease;
+}
+.faq-item:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(135,245,251,0.45);
+  transition: transform 0.3s ease-in-out;
 }
 
 .faq-question {
@@ -1095,7 +1101,7 @@ background: transparent !important;
 }
 
 .faq-question:hover {
-  color: #007BFF;
+  color: #87f5fb;
 }
 
 .faq-icon {
@@ -1339,7 +1345,7 @@ footer *,
   width: 90em;
   height: 210px; 
   position: absolute; 
-  margin-top: 33%;
+  margin-top: 36%;
   display: flex; 
   align-items: center;
   justify-content: space-around;
