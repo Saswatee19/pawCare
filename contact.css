@@ -76,6 +76,12 @@ html {
   padding: 2.5rem;
   transition: display 0.3s ease-in-out;
 }
+.confirm img{
+  max-width: 80%;
+  max-height: 200px;
+  object-fit: contain;
+  margin-top: 1.5rem;
+}
 .content{
   padding-top: 20%;
 }
@@ -605,14 +611,14 @@ footer *,
 
 @media (max-width: 480px) {
 
-  /* .content{
-    display: none;
-  } */
-  /* .short-msg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } */
+  .confirm{
+    padding: 1.5rem;
+  }
+  
+  .content{
+    padding-top: 0;
+    text-align: center;
+  }
   .confirm img{
     width: 50dvh;
   }
@@ -764,7 +770,7 @@ footer *,
 }
 #visit-clinic-card{
   background-color: #ffffff !important;
-  color: #2a1520;
+  color: #0f0e0e;
 }
 .transparent-form input,
 .transparent-form textarea,

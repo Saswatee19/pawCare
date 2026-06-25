@@ -38,6 +38,7 @@ setTimeout(()=>{
 }, 2000)
 
 // form validation
+let form = document.querySelector(".appointment-form");
 let nm = document.querySelector("#fullName");
 let phn = document.querySelector("#phone");
 let petName = document.querySelector("#petName");
@@ -45,6 +46,10 @@ let petName = document.querySelector("#petName");
 form.addEventListener('submit', (dets)=>{
     dets.preventDefault();
     let isValid = true;
+
+    document.querySelector(".error1").style.display = "none";
+    document.querySelector(".error2").style.display = "none";
+    document.querySelector(".error3").style.display = "none";
 
     if (nm.value.length <= 2) {
         document.querySelector(".error1").style.display = "block";
