@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let hamburger_icon = document.querySelector(".hamburger-icon");
     let close_icon = document.querySelector(".close-icon");
     let hamburger_text = document.querySelector(".hamburger-text");
-    let card = document.querySelector(".card"); // Ensured the dot (.) is here
+    let card = document.querySelector(".card"); 
 
-    // Only attach events if the elements actually exist on the current page
+    
     if (hamburger_icon && close_icon && hamburger_text && card) {
         hamburger_icon.addEventListener('click', () => {
             hamburger_text.classList.add('open');
@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // --- Preloader Logic ---
     let bird = document.querySelector(".bird");
     let dog = document.querySelector(".dog");
     let cat = document.querySelector(".cat");
