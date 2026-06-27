@@ -1265,6 +1265,13 @@ footer *,
 
 @media (max-width: 480px) {
   
+  .text-front{
+    font-size: 20px;
+  }
+  .text-back{
+    font-size: 20px;
+  }
+  
   .navright {
     display: none;
   }
@@ -1277,9 +1284,9 @@ footer *,
     z-index: 1001;
     cursor: pointer;*/
     display: flex;
-    position: absolute; /* Changed from fixed */
-    right: 25px;        /* Pushed slightly off the edge */
-    top: 25px;          /* Centered vertically in the header */
+    position: absolute; 
+    right: 25px;        
+    top: 25px;          
     z-index: 1001;
     cursor: pointer;
   }
@@ -1388,10 +1395,17 @@ footer *,
         font-size:30px;
     }
     h1{
-        font-size:24px;
+        opacity: 0;
     }
     p{
+      /* opacity: 0; */
         font-size:14px;
+    }
+    .responsive-heading{
+      opacity: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .container,
     .grid-container,
@@ -1416,6 +1430,9 @@ footer *,
     .helpline{
         font-size:16px;
     }
+    .our-service{
+      margin-top: 20px;
+    }
 
   .small-1 img,
   .small-3 img,
@@ -1430,6 +1447,9 @@ footer *,
   .small-box-7 img{
       height:200px;
       object-fit:cover;
+  }
+  .timing-box h1{
+    font-size: 5px;
   }
 
 
