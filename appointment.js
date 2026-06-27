@@ -36,3 +36,46 @@ let preloader = document.querySelector(".preloader");
 setTimeout(()=>{
     preloader.classList.add('preloader-hidden');
 }, 2000)
+
+// form validation
+let form = document.querySelector(".appointment-form");
+let nm = document.querySelector("#fullName");
+let phn = document.querySelector("#phone");
+let petName = document.querySelector("#petName");
+
+form.addEventListener('submit', (dets)=>{
+    dets.preventDefault();
+    let isValid = true;
+
+    document.querySelector(".error1").style.display = "none";
+    document.querySelector(".error2").style.display = "none";
+    document.querySelector(".error3").style.display = "none";
+
+    if (nm.value.length <= 2) {
+        document.querySelector(".error1").style.display = "block";
+        isValid = false;
+    }
+    
+    if (phn.value.length != 10) {
+        document.querySelector(".error2").style.display = "block";
+        isValid = false;
+    }
+
+    if (petName.value.length < 3) {
+        document.querySelector(".error3").style.display = "block";
+        isValid = false;
+    }
+
+    
+    if (isValid) {
+        let confirmBox = document.querySelector(".confirm");
+        confirmBox.style.display = "flex";
+        
+        setTimeout(() => {
+            confirmBox.style.display = "none";
+        }, 5000);
+
+        form.reset();
+    }
+});
+

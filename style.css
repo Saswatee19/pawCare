@@ -222,7 +222,7 @@ html {
 }
 .wagging-text {
   display: inline-block;
-  animation: wag 0.7s infinite;
+  animation: wag 0.93s infinite;
 }
 @keyframes wag {
   0% {
@@ -1044,6 +1044,106 @@ background: transparent !important;
   border-color: #ffffff;
   background: rgba(255,255,255,0.1) !important;
 }
+
+.pawcare-faq-section {
+  background-color: #f1e4f3;
+  padding: 60px 20px;
+  background-color: #f1e4f3;
+  font-family: "Sora", sans-serif;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Sora", sans-serif;
+}
+
+.faq-header h2 {
+  font-size: 2rem;
+  font-family: "Sora", sans-serif;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.faq-header p {
+  color: #666;
+  font-size: 1.1rem;
+  font-family: "Sora", sans-serif;
+}
+
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-item {
+  background-color: #a53860;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.faq-item:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(135,245,251,0.45);
+  transition: transform 0.3s ease-in-out;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 20px;
+  font-size: 1.1rem;
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  color: #a53860;
+  background: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: #87f5fb;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  font-weight: 400;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  background-color: #ffffff;
+  font-family: "Sora", sans-serif;
+}
+
+.faq-answer p {
+  padding: 0 20px 20px 20px;
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.faq-item.active .faq-question {
+  color: #007BFF;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
 /* FOOTER */
 
 footer {
@@ -1256,7 +1356,7 @@ footer *,
   width: 90em;
   height: 210px; 
   position: absolute; 
-  margin-top: 33%;
+  margin-top: 36%;
   display: flex; 
   align-items: center;
   justify-content: space-around;
@@ -1527,3 +1627,4 @@ footer *,
   }
 
 }
+
