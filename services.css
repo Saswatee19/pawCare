@@ -60,6 +60,9 @@ body {
     visibility: hidden;
     pointer-events: none;
 }
+.navright span{
+  margin-right: 0.2em;
+}
 .services-page {
   padding: 80px 20px;
 }
