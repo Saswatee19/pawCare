@@ -109,6 +109,9 @@ html {
   font-size: 20px;
   gap: 30px;
 }
+.navright span{
+  margin-right: 0.2em;
+}
 .del{
     display: flex;
     justify-content: center;
@@ -261,7 +264,10 @@ html {
   transition: transform 0.2s ease, box-shadow 0.2s ease; 
   box-shadow: 0 4px 6px rgba(247, 2, 2, 0.15); 
 }
-
+.btn-wrapper{
+  display: flex;
+  gap: 0.5em;
+}
 
 .btn:hover {
   transform: translateY(-4px); 
@@ -984,6 +990,10 @@ background: transparent !important;
 
 .booking * {
   background: transparent;
+}
+.book-btn-wrapper{
+  display: flex;
+  gap: 0.5em;
 }
 
 .booking h2 {

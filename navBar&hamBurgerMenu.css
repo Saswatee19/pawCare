@@ -28,6 +28,9 @@ html {
   border-bottom: 1px solid rgba(74, 21, 75, 0.15);
   
 }
+.navright span{
+  margin-right: 0.2em;
+}
 .logo{
     display: flex;
     gap: 10px;
