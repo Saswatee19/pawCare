@@ -438,7 +438,6 @@ html {
 
 .card-footer {
   display: flex;
-
   align-items: center;
   gap: 8px;
   background: #c4fcd7;
@@ -499,25 +498,29 @@ p{
     border-radius: 30px;
     overflow:hidden;
     margin: 10px;
-    padding: 50px;
+    padding: 25px;
     color: white;
 }
 .box:hover{
     transform: scale(1.03);
     transition:0.3s;
+    color: #87f5fb;
+    transform: translateY(-6px);
+    box-shadow: 0 25px 40px rgba(135,245,251,0.45);
+    transition: transform 0.3s ease-in-out;
 }
 .left{
-    animation:slideLeft 15s ease;
+    animation:slideLeft 9s ease;
 }
 .right{
-    animation:slideRight 15s ease;
+    animation:slideRight 9s ease;
 }
 .up{
-    animation: slideUp 15s ease;
+    animation: slideUp 9s ease;
 }
 
 .down{
-    animation: slideDown 15s ease;
+    animation: slideDown 9s ease;
 }
 .our-service{
     text-align: center;
@@ -696,11 +699,11 @@ p{
     height: 175px;
     color:white;
 }
-/* #left-doctor{
-    animation:slideLeft 25s ease;
-} */
+#left-doctor{
+    animation:slideLeft 10s ease;
+}
 #right-doctor{
-    animation:slideRight 25s ease;
+    animation:slideRight 10s ease;
 }
 /* @keyframes slideLeft{
     from{
