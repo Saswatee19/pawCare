@@ -22,6 +22,7 @@ html {
     bottom: 0;
     width: 100%;
     z-index: 9999;
+    box-sizing: border-box;
 }
 .bird{
     border-top: 2px solid #f1e4f3;
@@ -637,7 +638,7 @@ p{
     font-weight:bold;
     margin-top: 2em;
 }
-/* Container Setup */
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -647,12 +648,11 @@ p{
     margin: 0 auto;
 }
 
-/* Wrapper to support AOS animations correctly */
+
 .doc-wrapper {
     display: flex;
 }
 
-/* Unified Card styling with strict equal height features */
 .doctor-card {
     display: flex;
     flex-direction: column;
@@ -666,7 +666,7 @@ p{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Effects */
+
 .doctor-card:hover {
     transform: scale(1.03);
     color: #030ee7;
@@ -674,10 +674,10 @@ p{
     cursor: pointer;
 }
 
-/* Image Container */
+
 .card-img-wrap {
     width: 100%;
-    height: 250px; /* Adjust image height as needed */
+    height: 250px; 
     overflow: hidden;
 }
 
@@ -689,7 +689,6 @@ p{
     display: block;
 }
 
-/* Text Container - flex-grow pushes them to match heights perfectly */
 .card-body {
     padding: 20px;
     display: flex;
@@ -711,7 +710,6 @@ p{
     color: #666;
 }
 
-/* Header Text styling from your setup */
 .doctor-availability {
     text-align: center;
     font-size: 55px;
@@ -1299,6 +1297,13 @@ footer *,
 
 
 @media (max-width: 480px) {
+  .preloader .fa-5x {
+        font-size: 3.5em !important; 
+    }
+    .bird, .dog, .cat {
+        border-width: 2px;
+        padding: 10px;
+    }
   
   .text-front{
     font-size: 20px;
@@ -1312,12 +1317,6 @@ footer *,
   }
 
   .hamburger {
-    /*display: flex;
-    position: fixed;
-    right: 20px; 
-    top: 1.5em;
-    z-index: 1001;
-    cursor: pointer;*/
     display: flex;
     position: absolute; 
     right: 25px;        
@@ -1490,18 +1489,18 @@ footer *,
     
 
   .grid-container {
-        grid-template-columns: 1fr; /* Force 1 card per row */
+        grid-template-columns: 1fr; 
         gap: 15px;
         padding: 10px;
     }
 
     .doctor-availability {
-        font-size: 32px; /* Scale down giant typography for mobile */
+        font-size: 32px; 
         margin-top: 1em;
     }
 
     .card-img-wrap {
-        height: 220px; /* Slightly shorter images on tiny screens */
+        height: 220px; 
     }
 
     .card-body {
