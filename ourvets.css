@@ -147,3 +147,36 @@ body {
     font-size: 1rem;
     font-weight: 300;
 }
+
+
+@media screen and (max-width: 480px) {
+    .page-header {
+        font-size: 2rem; 
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+
+    .vets-container {
+        width: 100%;
+        padding: 0 1.25rem; 
+        gap: 1.5rem; 
+    }
+
+    .card-content {
+        padding: 1.25rem; 
+    }
+
+    .vet-name {
+        font-size: 1.4rem; 
+    }
+
+    .vet-card img {
+        width: 100%;      
+        height: auto;      
+        max-width: 100%;  
+    }
+
+    .vet-intro {
+        font-size: 0.95rem; 
+    }
+}
