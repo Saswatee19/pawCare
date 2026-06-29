@@ -137,36 +137,32 @@ doctors.forEach((doctor)=>{
 
 // audio logic
 
-// Function to initialize the audio triggers
-const initMeowAudio = () => {
-    if (localStorage.getItem('hasMeowed')) return;
+// Audio logic
+document.addEventListener("preloaderFinished", () => {
 
-    const playMeowOnce = () => {
-        const audio = document.getElementById('meowAudio');
-        
-        if (audio) {
-            audio.play()
-                .then(() => {
-                    localStorage.setItem('hasMeowed', 'true');
-                    // Only remove listeners if it ACTUALLY played successfully
-                    removeListeners();
-                })
-                .catch(error => {
-                    console.log("Autoplay blocked. Retrying on next valid click/touch...", error);
-                    // Do NOT remove listeners here; let the user click again
-                });
-        }
-    };
+    const audio = document.getElementById("meowAudio");
 
-    const removeListeners = () => {
-        window.removeEventListener('click', playMeowOnce);
-        window.removeEventListener('touchstart', playMeowOnce);
-    };
+    function playAudio() {
 
-    // Listen only for true user gestures (Exclude scroll)
-    window.addEventListener('click', playMeowOnce);
-    window.addEventListener('touchstart', playMeowOnce);
-};
+        console.log("Trying to play...");
 
-// Ensure your preloader event is hooked up correctly
-document.addEventListener('preloaderFinished', initMeowAudio);
+        audio.play()
+        .then(() => {
+            console.log("Played!");
+
+            sessionStorage.setItem("hasMeowed","true");
+
+            window.removeEventListener("wheel", playAudio);
+            window.removeEventListener("click", playAudio);
+        })
+        .catch(err=>{
+            console.log(err);
+        });
+    }
+
+    if (sessionStorage.getItem("hasMeowed")) return;
+
+    window.addEventListener("wheel", playAudio,{once:true});
+    window.addEventListener("click", playAudio,{once:true});
+
+});
