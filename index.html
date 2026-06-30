@@ -18,6 +18,9 @@
 </head>
 <body>
 
+    <!-- audio -->
+     <audio id="meowAudio" src="audio/meow-audio-2.mp3" preload="auto"></audio>
+
     <!-- preloader -->
 
     <div class="preloader">
@@ -142,7 +145,7 @@
     <main class="main">
 		<div class="mainleft">
 			<div class="mainlefttop">
-         <!--<a href="#" class="swap-link">
+         <a href="#" class="swap-link">
           <span class="text-wrapper">
             <span class="line text-front" style="display: flex; flex-direction: column;">
                 <span data-aos="fade-right" style="color: #ff5733;">Healthy</span>
@@ -153,19 +156,8 @@
                 <span>Pets.</span>  
             </span>
           </span>
-         </a> -->
-                <a href="#" class="swap-link">
-                    <span class="text-wrapper">
-                        <span class="line text-front">
-                            <span>Healthy</span>
-                            <span>care,</span>
-                        </span>
-                        <span class="line text-back">
-                            <span>Happy</span>
-                            <span>Pets.</span>
-                        </span>
-                    </span>
-                </a>
+         </a>
+        
             </div>  
             <div data-aos="fade-right" class="mainleftmid">
                 At PawCare, every <span class="wagging-text">tail-wag</span> matters. From routine check-ups to specialised surgery, our team treats your pet the way you would — with patience, love, and expertise.
@@ -234,22 +226,22 @@
         <div class="footer-info">
             <div data-aos="fade-left" data-aos-duration="1200" class="info-box">
               <div class="info-bubble" id="info-bubble-1"><i class="fa-solid fa-paw fa-2x" style="color: rgb(240, 242, 244);"></i></div>
-              <div class="info-val">1500+</div>
+              <div id="pets-num" class="info-val">1500+</div>
               <div class="info-text">Pets Treated</div>
             </div>
             <div data-aos="fade-left" data-aos-duration="1200" class="info-box">
                <div class="info-bubble" id="info-bubble-2"><i class="fa-solid fa-user-doctor fa-2x" style="color: rgb(240, 242, 244);"></i></div>
-               <div class="info-val">50+</div>
+               <div id="doctors-num" class="info-val">50</div>
                <div class="info-text">Expert Doctors</div>
             </div>
             <div data-aos="fade-right" data-aos-duration="1200" class="info-box">
                <div class="info-bubble" id="info-bubble-3"><i class="fa-regular fa-hospital fa-2x" style="color: rgb(240, 242, 244);"></i></div>
-               <div class="info-val">10+</div>
+               <div id="centers-num" class="info-val">10+</div>
                <div class="info-text">Care Centers</div>
         </div>
         <div data-aos="fade-right" data-aos-duration="1200" class="info-box">
             <div class="info-bubble" id="info-bubble-4"><i class="fa-regular fa-heart fa-2x fa-beat" style="color: rgb(240, 242, 244);"></i></div>
-            <div class="info-val">20+</div>
+            <div id="years-num" class="info-val">20+</div>
             <div class="info-text">Years of Trust</div>
         </div>
     </div>
@@ -300,7 +292,7 @@
         <div data-aos="flip-right" data-aos-duration="1300" class="doctor-availability">Vets Team at PawCare</div>
         <div data-aos="flip-right" data-aos-duration="1300" class="doctor-availability-heading-responsive">Vets Team at PawCare</div>
         <div class="grid-container">
-    <div class="doc-wrapper" data-aos="flip-left" data-aos-duration="1600">
+    <div class="doc-wrapper" data-aos="flip-left" data-aos-duration="1800">
         <a href="ourvets.html#suchismita" class="doctor-card">
             <div class="card-img-wrap">
                 <img src="Images/General Practitioner.png" alt="Dr. Suchismita Singh">
@@ -312,7 +304,7 @@
         </a>
     </div>
     
-    <div class="doc-wrapper" data-aos="flip-right" data-aos-duration="1600">
+    <div class="doc-wrapper" data-aos="flip-right" data-aos-duration="1800">
         <a href="ourvets.html#pratik" class="doctor-card">
             <div class="card-img-wrap">
                 <img src="Images/Veterinary Surgeon.png" alt="Dr. Pratik Kumar Sahoo">
@@ -324,7 +316,7 @@
         </a>
     </div>
     
-    <div class="doc-wrapper" data-aos="flip-right" data-aos-duration="1600">
+    <div class="doc-wrapper" data-aos="flip-right" data-aos-duration="1800">
         <a href="ourvets.html#saswatee" class="doctor-card">
             <div class="card-img-wrap">
                 <img src="Images/Veterinary Dentist.png" alt="Dr. Saswatee Mishra">
@@ -336,7 +328,7 @@
         </a>
     </div>
     
-    <div class="doc-wrapper" data-aos="flip-left" data-aos-duration="1600">
+    <div class="doc-wrapper" data-aos="flip-left" data-aos-duration="1800">
         <a href="ourvets.html#pratyus" class="doctor-card">
             <div class="card-img-wrap">
                 <img src="Images/Exotic Pet Specialist.png" alt="Dr. Pratyus Patnaik">

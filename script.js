@@ -1,3 +1,6 @@
+//hamburger logic
+
+
 let hamburger_icon = document.querySelector(".hamburger-icon");
 let close_icon = document.querySelector(".close-icon");
 let hamburger_text = document.querySelector(".hamburger-text");
@@ -10,6 +13,8 @@ close_icon.addEventListener('click', () => {
     hamburger_text.classList.remove('open');
     hamburger_icon.classList.remove('fade_out');
 });
+
+///preloader logic
 
 let bird = document.querySelector(".bird");
 let dog = document.querySelector(".dog");
@@ -45,6 +50,8 @@ setTimeout(()=>{
     document.dispatchEvent(new Event('preloaderFinished')); 
 }, 2000);
 
+//faq slide logic
+
   document.addEventListener('DOMContentLoaded', () => {
     const faqQuestions = document.querySelectorAll('.faq-question');
 
@@ -69,6 +76,8 @@ setTimeout(()=>{
       });
     });
   });
+
+  //some animation logic
 const boxes = document.querySelectorAll(".box");
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -123,4 +132,71 @@ doctors.forEach((doctor)=>{
     doctorObserver.observe(doctor);
 });
 
-  
+
+
+
+// audio logic
+
+// Audio logic
+document.addEventListener("preloaderFinished", () => {
+
+    const audio = document.getElementById("meowAudio");
+
+    function playAudio() {
+
+        console.log("playing...");
+
+        audio.play()
+        .then(() => {
+            console.log("Played!");
+
+            sessionStorage.setItem("hasMeowed","true");
+
+            window.removeEventListener("wheel", playAudio);
+            window.removeEventListener("click", playAudio);
+            window.removeEventListener("scroll", playAudio);
+        })
+        .catch(err=>{
+            console.log(err);
+        });
+    }
+
+    if (sessionStorage.getItem("hasMeowed")) return;
+
+    window.addEventListener("wheel", playAudio,{once:true});
+    window.addEventListener("click", playAudio,{once:true});
+    window.addEventListener("scroll", playAudio,{once:true});
+
+});
+//localStorage replaced with sessionStorage so that the db gets cleared on every relaod and hasMeow gets erased..learn this
+
+//counter
+
+    document.addEventListener("preloaderFinished", () => {
+  const counters = [
+    { element: document.querySelector("#pets-num"), target: 1500, suffix: "+" },
+    { element: document.querySelector("#doctors-num"), target: 50, suffix: "+" },
+    { element: document.querySelector("#centers-num"), target: 10, suffix: "+" },
+    { element: document.querySelector("#years-num"), target: 20, suffix: "+" }
+  ];
+
+  counters.forEach(counter => {
+    if (!counter.element) return; 
+
+    let currentCount = 0;
+    
+    
+    const customIntervalSpeed = 1000 / counter.target; //did this to measure which num needs what time interval for incrementing bcoz large num should hike in less time 
+
+    const intervalId = setInterval(() => {
+      currentCount++;
+
+      if (currentCount >= counter.target) {
+        counter.element.textContent = counter.target + counter.suffix;
+        clearInterval(intervalId);
+      } else {
+        counter.element.textContent = currentCount + counter.suffix;
+      }
+    }, customIntervalSpeed); 
+  });
+});
