@@ -144,7 +144,7 @@ document.addEventListener("preloaderFinished", () => {
 
     function playAudio() {
 
-        console.log("Trying to play...");
+        console.log("playing...");
 
         audio.play()
         .then(() => {
@@ -154,6 +154,7 @@ document.addEventListener("preloaderFinished", () => {
 
             window.removeEventListener("wheel", playAudio);
             window.removeEventListener("click", playAudio);
+            window.removeEventListener("scroll", playAudio);
         })
         .catch(err=>{
             console.log(err);
@@ -164,5 +165,38 @@ document.addEventListener("preloaderFinished", () => {
 
     window.addEventListener("wheel", playAudio,{once:true});
     window.addEventListener("click", playAudio,{once:true});
+    window.addEventListener("scroll", playAudio,{once:true});
 
+});
+//localStorage replaced with sessionStorage so that the db gets cleared on every relaod and hasMeow gets erased..learn this
+
+//counter
+
+    document.addEventListener("preloaderFinished", () => {
+  const counters = [
+    { element: document.querySelector("#pets-num"), target: 1500, suffix: "+" },
+    { element: document.querySelector("#doctors-num"), target: 50, suffix: "+" },
+    { element: document.querySelector("#centers-num"), target: 10, suffix: "+" },
+    { element: document.querySelector("#years-num"), target: 20, suffix: "+" }
+  ];
+
+  counters.forEach(counter => {
+    if (!counter.element) return; 
+
+    let currentCount = 0;
+    
+    
+    const customIntervalSpeed = 1000 / counter.target; //did this to measure which num needs what time interval for incrementing bcoz large num should hike in less time 
+
+    const intervalId = setInterval(() => {
+      currentCount++;
+
+      if (currentCount >= counter.target) {
+        counter.element.textContent = counter.target + counter.suffix;
+        clearInterval(intervalId);
+      } else {
+        counter.element.textContent = currentCount + counter.suffix;
+      }
+    }, customIntervalSpeed); 
+  });
 });
