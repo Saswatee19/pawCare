@@ -1341,6 +1341,9 @@ footer *,
 
 
 @media (max-width: 500px) {
+  *{
+    box-sizing: bor;
+  }
   .preloader .fa-5x {
         font-size: 3.5em !important; 
     }
@@ -1371,7 +1374,7 @@ footer *,
     right: -100dvw; 
     width: 100dvw;
     height: 100dvh;
-    background-color: #f1e4f3;
+    background-color: var(--bg-color);
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
@@ -1582,7 +1585,7 @@ footer *,
   #reviews .testimonials-grid, .testimonials-grid {
     display: flex !important;
     flex-direction: column !important;
-    width: 100% !important;
+    /* width: 100% !important; */
     margin: 40px auto 80px !important;
     gap: 20px !important;
   }
