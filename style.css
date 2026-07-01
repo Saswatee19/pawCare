@@ -1524,7 +1524,7 @@ footer *,
         padding:25px;
     }
     .timing-box{
-        width:95%;
+        box-sizing: border-box;
         padding:20px;
     }
     .row{
@@ -1591,7 +1591,7 @@ footer *,
   }
   #reviews .testimonial-card, .testimonial-card {
     padding: 24px !important;
-    width: 100% !important;
+    /* width: 100% !important; */
     max-width: 100% !important;
     margin-bottom: 20px !important;
     box-sizing: border-box !important;
@@ -1695,7 +1695,7 @@ font-size: 0.95rem;
     }
     
     .mainleft {
-        max-width: 100%;
+        /* max-width: 100%; */
     }
     
 }
