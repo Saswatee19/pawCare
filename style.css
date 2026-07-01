@@ -1342,7 +1342,7 @@ footer *,
 
 @media (max-width: 500px) {
   *{
-    box-sizing: bor;
+    box-sizing: border-box;
   }
   .preloader .fa-5x {
         font-size: 3.5em !important; 
