@@ -71,14 +71,14 @@ html {
   z-index: 10000;
   height: 100%;
   width: 100%;
-  background-color: #a53860;
-  color: #fcfefe;
+  background-color: #e8ccad;
+  color: #3d1f00;
   display: none;
   font-size: medium;
   font-weight: 700;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   box-sizing: border-box;
   padding: 1.5rem;
   transition: display 0.3s ease-in-out;
@@ -656,9 +656,11 @@ footer *,
     justify-content: center;
     align-items: center;
   } */
-  .confirm img{
-    width: 50dvh;
-  }
+   .confirm{
+    display: none;
+    justify-content: center;
+    align-items: center;
+   }
   
   .navright {
     display: none;
