@@ -105,11 +105,12 @@ body, html {
 }
 .logo-text{
     font-family: var(--font-l);
+    color: var(--bg-text-color);
     font-size: 30px;
     transition: transform 0.2s ease;
 }
 .logo-icon{
-    fill: #000000;
+    fill: #3d1f00;
     transition: transform 0.4s ease;
     opacity: 1;
    /* transform: translateY(-20px);*/
@@ -201,7 +202,7 @@ body, html {
     position: absolute;
     top: 60%;
     left: 50%;
-    background-color:var(--bg-color);
+    background-color: #faf4ec;
     height: 500px;
     width: 500px;
     max-width: 90%; 

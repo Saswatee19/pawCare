@@ -93,11 +93,12 @@ body {
 }
 .logo-text{
     font-family: var(--font-l);
+    color: #3d1f00;
     font-size: 30px;
     transition: transform 0.2s ease;
 }
 .logo-icon{
-    fill: #000000;
+    fill: #3d1f00;
     transition: transform 0.4s ease;
     opacity: 1;
 }
@@ -186,9 +187,11 @@ body {
 
 
 .service-row:hover {
+  scale: 1.02;
   transform: translateY(-6px);
+  border-bottom: 8px solid #66bcb4 ;
   box-shadow: 0 15px 30px rgba(122, 20, 72, 0.15);
-  transition: transform 0.3s ease-in, border 0.3s ease-in;
+  transition: transform 0.3s ease-in, border 0.3s ease-in, scale 0.1s ease-in-out;
 }
 
 .service-row:nth-child(even) {

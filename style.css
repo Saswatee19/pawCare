@@ -98,11 +98,12 @@ html {
 }
 .logo-text{
     font-family: var(--font-l);
+    color: var(--bg-text-color);
     font-size: 30px;
     transition: transform 0.2s ease;
 }
 .logo-icon{
-    fill: #000000;
+    fill: #3d1f00;
     transition: transform 0.4s ease;
     opacity: 1;
 }
@@ -176,7 +177,7 @@ html {
   font-size: 4rem; 
   text-transform: uppercase;
   text-decoration: none;
-  color: #000000;
+  color: var(--bg-text-color);
   font-weight: 900;
   width: 100% !important;
   max-width: 500px; 
@@ -1048,7 +1049,7 @@ background: transparent !important;
   font-size: 3rem;
   font-family: var(--font-l);
   font-weight: var(--wt-m);
-  color: #333;
+  color:var(--bg-text-color);
   margin-bottom: 10px;
 }
 
