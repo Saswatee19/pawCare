@@ -76,7 +76,7 @@ html {
 
 .navbar {
   width: 100%;
-  position: fixed;
+  position: sticky;
   top: 0%;
   z-index: 1000;
   display: flex;
@@ -98,11 +98,12 @@ html {
 }
 .logo-text{
     font-family: var(--font-l);
+    color: var(--bg-text-color);
     font-size: 30px;
     transition: transform 0.2s ease;
 }
 .logo-icon{
-    fill: #000000;
+    fill: #3d1f00;
     transition: transform 0.4s ease;
     opacity: 1;
 }
@@ -176,7 +177,7 @@ html {
   font-size: 4rem; 
   text-transform: uppercase;
   text-decoration: none;
-  color: #000000;
+  color: var(--bg-text-color);
   font-weight: 900;
   width: 100% !important;
   max-width: 500px; 
@@ -319,7 +320,7 @@ html {
 }
 .dog-container{
   flex: 1;
-  margin-top: 6%;
+  margin-top: 8%;
   margin-left: -10%;
   height: 66%;
   width: 39%;
@@ -331,7 +332,7 @@ html {
   height: 50em;
 }
 .cat-container{
-  margin-top: -2%;
+  margin-top: 2%;
   margin-left: -5%;
   height: 70%;
   width: 39%;
@@ -554,7 +555,7 @@ html {
 /* section2 */
 
 h1{
-    margin:50px;
+    margin-top:50px;
 }
 p{
     margin:20px;
@@ -825,7 +826,7 @@ p{
   text-align: center;
   color: #2a1520;
   margin-bottom: 16px;
-  margin-top: 200px;
+  margin-top: 50px;
 }
 
 .section-sub {
@@ -1048,7 +1049,7 @@ background: transparent !important;
   font-size: 3rem;
   font-family: var(--font-l);
   font-weight: var(--wt-m);
-  color: #333;
+  color:var(--bg-text-color);
   margin-bottom: 10px;
 }
 
@@ -1508,6 +1509,7 @@ footer *,
   }
   .our-service-heading{
     display: none;
+    opacity: 0;
   }
 
   .our-service-heading,
@@ -1528,7 +1530,8 @@ footer *,
     }
     .doctor-availability-heading-responsive{
       opacity: 1;
-      font-size: 23px;
+      text-align: center;
+      font-size: 36px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1568,9 +1571,9 @@ footer *,
     .helpline{
         font-size:16px;
     }
-    .our-service-heading{
+    /* .our-service-heading{
       margin-top: 20px;
-    }
+    } */
     
 
   .grid-container {
@@ -1609,7 +1612,7 @@ footer *,
   }
   .section-title {
     font-size: 36px;
-    margin-top: 80px;
+    /* margin-top: 80px; */
   }
   .section-sub {
     font-size: 15px;

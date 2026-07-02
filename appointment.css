@@ -71,14 +71,14 @@ html {
   z-index: 10000;
   height: 100%;
   width: 100%;
-  background-color: #a53860;
-  color: #fcfefe;
+  background-color: #e8ccad;
+  color: #3d1f00;
   display: none;
   font-size: medium;
   font-weight: 700;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   box-sizing: border-box;
   padding: 1.5rem;
   transition: display 0.3s ease-in-out;
@@ -114,7 +114,7 @@ html {
 
 .navbar {
   width: 100%;
-  position: fixed;
+  position: sticky;
   top: 0%;
   z-index: 1000;
   display: flex;
@@ -139,11 +139,12 @@ html {
 }
 .logo-text{
     font-family: var(--font-l);
+    color: #3d1f00;
     font-size: 30px;
     transition: transform 0.2s ease;
 }
 .logo-icon{
-    fill: #000000;
+    fill: #3d1f00;
     transition: transform 0.4s ease;
     opacity: 1;
 }
@@ -166,6 +167,7 @@ html {
 .del{
     display: flex;
     justify-content: center;
+    font-size: medium;
     align-items: center;
     color: #2a1520;
     transition: color 0.3s ease;
@@ -679,9 +681,11 @@ footer *,
     justify-content: center;
     align-items: center;
   } */
-  .confirm img{
-    width: 50dvh;
-  }
+   .confirm{
+    display: none;
+    justify-content: center;
+    align-items: center;
+   }
   
   .navright {
     display: none;
