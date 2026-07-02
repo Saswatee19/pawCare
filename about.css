@@ -447,7 +447,7 @@ footer *,
     right: -100dvw; 
     width: 100dvw;
     height: 100dvh;
-    background-color: #f1e4f3;
+    background-color: var(--bg-color);
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
