@@ -445,6 +445,9 @@ footer *,
   flex-direction: column;
   justify-content: flex-start;
 }
+.footer-brand {
+  gap: 1rem;
+}
 
 .footer-logo {
   font-family: var(--font-l);
@@ -463,6 +466,28 @@ footer *,
   line-height: 1.8;
   font-size: 0.95rem;
   color: rgba(255,255,255,0.78) !important;
+  margin: 0;
+}
+
+.footer-social{
+    display:flex;
+    gap:20px;
+    margin-top:0;
+}
+
+.footer-social a{
+    color:rgba(255,255,255,0.68);
+    text-decoration:none;
+    font-size:1.35rem;
+    transition:color .2s ease;
+}
+
+.footer-social a:hover{
+    color:#66bcb4;
+}
+
+.footer-social a i{
+    display:block;
 }
 
 .footer-col h4 {
