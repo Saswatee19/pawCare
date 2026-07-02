@@ -70,12 +70,12 @@ html {
   z-index: 10000;
   height: 100%;
   width: 100%;
-  background-color: #a53860;
-  color: #fcfefe;
+  background-color: #211206;
+  color: #ffffff;
   display: none;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   box-sizing: border-box;
   padding: 1.5rem;
   transition: display 0.3s ease-in-out;
@@ -91,6 +91,7 @@ html {
 }
 .content{
   padding-top: 20%;
+  font-weight: 700;
 }
 .short-msg {
   display: none;
@@ -252,15 +253,15 @@ main {
 }
 
 .btn-aqua {
-  background: #edc55b !important;
+  background: #e66f2d !important;
   color: #3d1f00 !important;
   padding: 0.8rem 2rem;
+  border: 2px solid #3d1f00;
   border-radius: 50px;
   font-weight: 700;
   font-size: 0.95rem;
   text-decoration: none;
   transition: transform 0.15s, box-shadow 0.2s;
-  border: none; 
   cursor: pointer;
 }
 
@@ -665,7 +666,7 @@ footer *,
     right: -100dvw; 
     width: 100dvw;
     height: 100dvh;
-    background-color: #f1e4f3;
+    background-color: #e8ccad;
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
