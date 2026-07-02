@@ -1191,7 +1191,7 @@ footer *,
 }
 
 .footer-col h4 {
-  color: #ffffff !important;
+  color: var(--bg-color) !important;
   font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -1304,7 +1304,7 @@ footer *,
 }
 
 .footer-bottom a {
-  color: #87f5fb !important;
+  color:var(--bg-color) !important;
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
@@ -1477,7 +1477,7 @@ footer *,
     font-size: small;
   }
   #main2{
-    height: 130em;
+    height: 128em;
   }
   .our-service-heading{
     display: none;
@@ -1501,7 +1501,7 @@ footer *,
     }
     .doctor-availability-heading-responsive{
       opacity: 1;
-      font-size: 20px;
+      font-size: 23px;
       display: flex;
       justify-content: center;
       align-items: center;
